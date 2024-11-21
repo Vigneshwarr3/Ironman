@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stark's Portfolio</title>
+    <meta name="description" content="Genius, billionaire, playboy, philanthropist.">
+    <meta name="keywords" content="Ironman, Iron man, Genius, billionaire, playboy, philanthropist.">
+    <link rel="icon" href="assets/ironman_head.png"></link>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tony Stark">
+    <meta name="og:description" content="Explore the legacy of Iron Man, where genius innovation and heroic adventure collide in a journey of technology and transformation.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav id = "desktop-nav">
+        <div class = "logo"><a href="#home" onclick="showSection(event, 'home')">Tony Stark</a></div>
+        <div>
+            <ul class = "nav-links">
+                <li><a href = "assets/Ironman_resume.pdf" target = "_blank"><i class = "fas fa-file-alt"></i> <span class = "link-text">Resume</span></a></li>
+                <li><a href="#projects" onclick="showProjectsSection(event, 'projects')"><i class="fas fa-laptop-code"></i><span class="link-text">Projects</span></a></li>
+                <li><a href="#about" onclick="showSection(event, 'about')"><i class="fas fa-user"></i><span class="link-text">About</span></a></li>
+                <li class="divider"></li> <!-- Divider -->
+                <li><a href="https://www.linkedin.com/in/tony-stark-0106822ba/" target="_blank"><i class="fab fa-linkedin-in"></i><span class="link-text">LinkedIn</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id = "home" class="hidden">
+        <div id = "home-text">
+            <br>
+            <h1>Greetings, I am Iron Man</h1>
+            <p>A genius 🧠, billionaire 💰, philanthropist ☮️.</p>
+            <p>When I'm not saving the world, I'm busy creating the next big thing...</p>
+            <p>Check out my projects to see how I blend technology with a vision for a better tomorrow.</p>
+        </div>
+
+            <div>
+                <img id = "home-img" src = "assets/iron_man_whitebg.png" alt="Ironman"/>
+            </div> 
+
+    </section>
+    <section id="projects" class="hidden">
+        <h1>MY PROJECTS 📝</h1>
+        <p id="description">Explore a collection of my most impactful projects, showcasing my skills in data analysis. Each project highlights my problem-solving abilities and commitment to leveraging data for innovative solutions. Click on any project to learn more about my approach, methodologies, and outcomes.</p>
+        <div class="projects-container">
+            <div class="project-card" data-url="https://github.com/ironman/arc_reactor/" onclick="window.location.href=this.getAttribute('data-url');">
+                <div class="project-content">
+                    <img id = "project-img" src="/assets/arc_reactor.png" alt="Arc reactor">
+                    <h3>Mini Arc Reactor</h3>
+                    <p>Created an mini arc reactor while held captive by terrorists, to power my first iteration Ironman suit (Mark-1). </p>
+                </div>
+            </div>
+            <div class="project-card" data-url="https://github.com/ironman/nano_tech_suit/" onclick="window.location.href=this.getAttribute('data-url');">
+                <div class="project-content">
+                    <img id = "project-img" src="/assets/nano_tech-suit.jpg" alt="Nano tech Suit">
+                    <h3>Nano Tech Suit</h3>
+                    <p>An armor that utilizes nanotechnology to seamlessly deploy and assemble in real-time, offering unparalleled adaptability and firepower in combat.</p>
+                </div>
+            </div>
+            <div class="project-card" data-url="https://github.com/ironman/friday_ai/" onclick="window.location.href=this.getAttribute('data-url');">
+                <div class="project-content">
+                    <img id = "project-img" src="/assets/ais.png" alt="Friday_ai">
+                    <h3>FRIDAY - AI</h3>
+                    <p>FRIDAY is my intelligent AI assistant that manages my suit operations, provides real-time support, and offers strategic insights during combat.</p>
+                </div>
+            </div>
+            <div class="project-card" data-url="https://github.com/ironman/edith_ai/" onclick="window.location.href=this.getAttribute('data-url');">
+                <div class="project-content">
+                    <img id = "project-img" src="/assets/edith.png" alt="edith_ai">
+                    <h3>EDITH - AI</h3>
+                    <p>Even Dead, I'm The Hero enables remote access to a vast network of drones and technology, allowing me to monitor and control operations from anywhere.</p>
+                </div>
+            </div>
+            <!-- Repeat for more projects -->
+        </div>
+    </section>
+    <section id = "about", class="about-section hidden">
+        <div class="about-image">
+            <img id="about-img" src="/assets/tony stark.jpeg" alt="Iron man" width="500" height="200">
+        </div>
+        <div class="about-text">
+            <h1>Hello there!</h1>
+            <p>I'm Tony Stark, the billionaire CEO of Stark Industries. From a young age, I've been fascinated by technology and innovation, leading me to create groundbreaking advancements that not only redefine industries but also aim to make the world a better place. My journey took a dramatic turn when I built the Iron Man suit, an invention born out of necessity that transformed me into a global protector. Now, I dedicate my time to improving my designs and exploring new frontiers in science, always with an eye toward creating a brighter, more sustainable future.</p>
+            <br>
+            <p>
+                Beyond my tech ventures, I'm passionate about philanthropy and responsible innovation. I believe that with great power comes great responsibility, and I strive to use my resources to address pressing global issues, from clean energy solutions to humanitarian efforts. Whether I'm in the lab developing the next game-changing technology or suiting up to take on formidable foes, I’m committed to making a difference. Join me on this exciting journey, and let's explore how we can harness the power of innovation for good!
+                <br><br>
+                ✌️<br>Tony Stark
+            </p>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
